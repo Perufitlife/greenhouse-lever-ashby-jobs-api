@@ -1,6 +1,6 @@
-# Greenhouse, Lever, Ashby & Workable jobs API: search 680k open jobs in one call
+# Greenhouse, Lever, Ashby, Workable & Workday jobs API: search 1M+ open jobs in one call
 
-How to search the open jobs of 19,000+ companies that hire through **Greenhouse, Lever, Ashby, Workable, SmartRecruiters, Personio, Recruitee, Teamtailor and Breezy HR**, without crawling each career page yourself.
+How to search the open jobs of 20,600 companies (1,093,665 jobs on 2026-11-16) that hire through **Workday, Greenhouse, Lever, Ashby, Workable, SmartRecruiters, Personio, Recruitee, Teamtailor and Breezy HR**, without crawling each career page yourself.
 
 This repo is a short guide with real output. The search runs on the Apify Actor [Greenhouse, Lever, Ashby & Workable Jobs API](https://apify.com/renzomacar/ats-jobs-search). It reads a prebuilt index (rebuilt twice a day from the public job boards), so a search answers in a few seconds.
 
@@ -113,7 +113,7 @@ console.log(items.length);
 | `excludeKeywords` | Titles to leave out. |
 | `locations` | Text that must appear in the job location. |
 | `companies` / `excludeCompanies` | Limit to, or skip, the companies you name. |
-| `ats` | Limit to some systems: `greenhouse`, `lever`, `ashby`, `workable`, `smartrecruiters`, `personio`, `recruitee`, `teamtailor`, `breezy`. |
+| `ats` | Limit to some systems: `greenhouse`, `lever`, `ashby`, `workable`, `smartrecruiters`, `personio`, `recruitee`, `teamtailor`, `breezy`, `workday`. |
 | `remoteOnly` | Only jobs marked remote. |
 | `postedWithinDays` / `postedAfter` | Only jobs published since then. |
 | `minSalary`, `salaryCurrency`, `onlyWithSalary` | Filter on the published pay. |
@@ -123,8 +123,8 @@ console.log(items.length);
 
 ## What it does not cover
 
-- Companies on Workday, iCIMS, BambooHR or a custom careers site.
-- Pay is only there when the company published it: about 16% of jobs. Workable, SmartRecruiters and Personio publish no pay field.
+- Companies on iCIMS, BambooHR or a custom careers site. Workday is covered for 880 employers; for any other Workday career site see the [Workday jobs API guide](https://github.com/Perufitlife/workday-jobs-api).
+- Pay is only there when the company published it: a minority of jobs. Workday, Workable, SmartRecruiters and Personio publish no pay field.
 - The index is rebuilt twice a day, so a job opened an hour ago may not be in yet.
 
 ## Price
